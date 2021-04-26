@@ -3,7 +3,7 @@ import requests
 import csv
 
 
-csv_file = open('fornecedores.csv', 'w', newline='')
+csv_file = open('fornecedores.csv', 'w', newline='', encoding='utf-8')
 csv_write = csv.writer(csv_file)
 csv_write.writerow(['id', 'empresa', 'telefone', 'site', 'email'])
 
@@ -24,11 +24,6 @@ for elemento in todos_elementos:
     site = elemento.find('i', class_='fa-link').next_element.next_element.text
     email = elemento.find('i', class_='fa-at').next_element.next_element.text
 
-    print('empresa:', empresa)
-    print('telefone:', telefone)
-    print('site:', site)
-    print('email:', email)
-    print('-'*40)
     csv_write.writerow([id, empresa, telefone, site, email])
     id += 1
 
