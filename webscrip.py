@@ -3,7 +3,8 @@ import requests
 import csv
 
 
-csv_file = open('fornecedores.csv', 'w', newline='', encoding='utf-8')
+csv_file = open('./dados/fornecedores/fornecedores.csv',
+                'w', newline='', encoding='utf-8')
 csv_write = csv.writer(csv_file)
 csv_write.writerow(['id', 'empresa', 'telefone', 'site', 'email'])
 
