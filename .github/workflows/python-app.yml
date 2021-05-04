@@ -16,4 +16,4 @@ jobs:
           docker image build -t josedembo/web_scraping:v1 .
       - name: docker run container
         run: |
-          docker container run -t  -v /mnt/d/repositórios/web_scraping/dados/fornecedores:/app/dados/fornecedores josedembo/web_scraping:v1
+          docker container run -t  -v web_scraping/dados/fornecedores:/app/dados/fornecedores josedembo/web_scraping:v1
